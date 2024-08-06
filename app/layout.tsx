@@ -1,18 +1,14 @@
-import '@mantine/core/styles.css';
 import React from 'react';
-import { MantineProvider, ColorSchemeScript } from '@mantine/core';
-import { theme } from '../theme';
 
 export const metadata = {
-  title: 'Mantine Next.js template',
-  description: 'I am using Mantine with Next.js!',
+  title: 'forms template',
+  description: 'nextjs demo learn',
 };
 
 export default function RootLayout({ children }: { children: any }) {
   return (
     <html lang="en">
       <head>
-        <ColorSchemeScript />
         <link rel="shortcut icon" href="/favicon.svg" />
         <meta
           name="viewport"
@@ -20,7 +16,23 @@ export default function RootLayout({ children }: { children: any }) {
         />
       </head>
       <body>
-        <MantineProvider theme={theme}>{children}</MantineProvider>
+        <div className="content">
+          <div>
+            <div className="header">
+              <h1 className="">
+                设置
+              </h1>
+              <p className="">管理你的账户设置并设置电子邮件选项</p>
+            </div>
+            <hr />
+            <div>
+              <aside>
+
+              </aside>
+            </div>
+          </div>
+          {children}
+        </div>
       </body>
     </html>
   );
